@@ -16,27 +16,15 @@
  * limitations under the License.
  */
 
-module.exports = {
-  FromPgn: require('./lib/fromPgn').Parser,
-  parseN2kString: require('./lib/stringMsg').parseN2kString,
-  isN2KString: require('./lib/stringMsg').isN2KString,
-  toPgn: require('./lib/toPgn').toPgn,
-  toActisenseSerialFormat: require('./lib/stringMsg').toActisenseSerialFormat,
-  pgnToActisenseSerialFormat: require('./lib/toPgn').pgnToActisenseSerialFormat,
-  pgnToiKonvertSerialFormat: require('./lib/toPgn').pgnToiKonvertSerialFormat,
-  pgnToYdgwRawFormat: require('./lib/toPgn').pgnToYdgwRawFormat,
-  pgnToPCDIN: require('./lib/toPgn').pgnToPCDIN,
-  canbus: require('./lib/canbus'),
-  iKonvert: require('./lib/ikonvert'),
-  Ydwg02: require('./lib/ydgw02'),
-  Ydgw02: require('./lib/ydgw02'),
-  Venus: require('./lib/venus'),
-  VenusMQTT: require('./lib/venus-mqtt'),
-  discover: require('./lib/discovery'),
-  SimpleCan: require('./lib/simpleCan')
-}
+// module.exports = {
+//   Parser: require('./lib/fromPgn').Parser,
+// }
 
-try {
-  module.exports.serial = require('./lib/serial')
-} catch ( ex ) {
-}
+// try {
+//   module.exports.serial = require('./lib/serial')
+// } catch ( ex ) {
+// }
+
+const Parser = require('./lib/fromPgn').Parser
+export default Parser
+
